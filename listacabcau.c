@@ -96,14 +96,16 @@ void buscarNoticiasPorPalavraChaveCabCau(Lista* l, char* palavra){
     }
 }
 int quantidadeNoticiasPendentes(Lista* l){
-    int count = 0;
+    int qtd = 0;
     if(!estaVaziaCabCau(l)){
         NoCabCau* p;
         for(p=l->cab->prox; p!=l->cau; p=p->prox){
-            count++;
+            if(p->info.classificacao == EmAnalise){
+                qtd++;
+            }
         }
+        printf("Quantidade de noticias pendentes: %d\n", qtd);
     }
-    return count;
 }
 
 void imprimirTodasNoticiasCabCau(Lista* l){

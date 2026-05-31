@@ -84,8 +84,15 @@ void main(){
                         scanf("%d", &classificacao);
                     } while (classificacao < 1 || classificacao > 2);
                     
-                    inserirFimEncad(&listaEncad, p->info);
-                    removerNoticiaPorIdCabCau(&cabCau, p->info.id);
+                    if(classificacao == 1 || classificacao == 2){
+                        if(classificacao == 1){
+                            p->info.classificacao = Confiavel;
+                        } else {
+                            p->info.classificacao = Suspeita;
+                        }
+                        inserirFimEncad(&listaEncad, p->info);
+                        removerNoticiaPorIdCabCau(&cabCau, p->info.id);
+                    }
                     p = proximo;
                 }
                 break;

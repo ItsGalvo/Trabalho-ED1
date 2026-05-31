@@ -98,6 +98,8 @@ void removerPorPalavraChaveEncad(NoEncadeada** l, char* palavra){
             if(strstr(p->info.titulo, palavra) != NULL || strstr(p->info.conteudo, palavra) != NULL){
                 if(ant == NULL){
                     *l = p->prox;
+                    printf("Noticia com a palavra-chave '%s' removida.\n", palavra);
+
                 }else{
                     ant->prox = p->prox;
                 }
