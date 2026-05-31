@@ -104,8 +104,8 @@ int quantidadeNoticiasPendentes(Lista* l){
                 qtd++;
             }
         }
-        printf("Quantidade de noticias pendentes: %d\n", qtd);
-    }
+    }printf("Quantidade de noticias pendentes: %d\n", qtd);
+
 }
 
 void imprimirTodasNoticiasCabCau(Lista* l){

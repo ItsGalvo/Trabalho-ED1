@@ -66,7 +66,7 @@ void inserirNovaNoticiaEncad(NoEncadeada** l){
     char data[11], titulo[200], conteudo[1000], fonte[100];
     Classificacao classificacao;
     
-    printf("Digite a data da notícia (DD/MM/AAAA): ");
+    printf("Digite a data da noticia (DD/MM/AAAA): ");
     scanf(" %[^\n]", data);
     printf("Digite o titulo da noticia: ");
     scanf(" %[^\n]", titulo);
